@@ -1,9 +1,17 @@
-const userName = prompt('Пожалуйста, введите своё имя');
-const userPassword = prompt('Пожалуйста, введите пароль');
+let userName = prompt('Пожалуйста, введите свой логин');
 
-console.log(userName, 'name');
-console.log(userPassword, 'password');
-
-if ((userName === 'admin') && (userPassword === 'qWeRty123')) {
-    alert('Доступ надано')
+if (userName === 'Admin') {
+    let password = prompt('Введите пароль');
+    if (password === 'qWeRty123') {
+        alert('Доступ предоставлен');
+    } else if (password === '' || password === null) {
+        alert('Отмена');
+    } else {
+        alert('Неправильный пароль');
+    }
+    
+} else if (userName === '' || userName === null) {
+    alert('Отменено');
+} else {
+    alert('Такой логин незарегестрирован')
 }

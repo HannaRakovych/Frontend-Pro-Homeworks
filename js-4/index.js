@@ -1,16 +1,35 @@
-let currentPosition = (3, 2);
+let x = prompt('Начальное положение Вашего коня на шахматной доске по вертикали!');
+let y = prompt('Начальное положение Вашего коня на шахматной доске по горизонтали!');
 
-const nextMoveHorizontal = prompt('Сделайте свой ход по горизонтали!');
-const nextMoveVertical = prompt('Сделайте свой ход по вертикали!')
+let nextMoveX = prompt('Сделайте свой ход по вертикали!');
+let nextMoveY = prompt('Сделайте свой ход по горизонтали!');
 
-if (nextMoveHorizontal === '4' && nextMoveVertical === '4') {
-    alert('true')
-} else if (nextMoveHorizontal === '2' && nextMoveVertical === '4') {
-    alert('true')
-} else if (nextMoveHorizontal === '5' && nextMoveVertical === '3') {
-    alert('true')
-} else if (nextMoveHorizontal === '1' && nextMoveVertical === '3') {
-    alert('true')
-} else {
-    alert(false)
+console.log(x, 'Начальное положение по оси x');
+console.log(y, 'Начальное положение по оси y');
+console.log(nextMoveX, 'Ход по оси x');
+console.log(nextMoveY, 'Ход по оси y');
+
+
+if (nextMoveX  == Number(x) + 1 && nextMoveY == Number(y) + 2) {
+    alert(true);
+} else if (nextMoveX  == Number(x) + 2 && nextMoveY == Number(y) + 1) {
+    alert(true);
+} else if (nextMoveX  == Number(x) + 1 && nextMoveY == Number(y) - 2) {
+    alert(true);
+} else if (nextMoveX  == Number(x) + 2 && nextMoveY == Number(y) - 1) {
+    alert(true);
+} else if (nextMoveX  == Number(x) - 1 && nextMoveY == Number(y) + 2) {
+    alert(true);
+} else if (nextMoveX  == Number(x) - 2 && nextMoveY == Number(y) + 1) {
+    alert(true);
+} else if (nextMoveX  == Number(x) - 1 && nextMoveY == Number(y) - 2) {
+    alert(true);
+} else if (nextMoveX  == Number(x) + 2 && nextMoveY == Number(y) - 1) {
+    alert(true);
+}  else if (nextMoveX < 1 && nextMoveX > 8) {
+    alert(false);
+} else if (nextMoveY < 1 && nextMoveY > 8) {
+    alert(false);
+}  else {
+    alert(false);
 }
