@@ -5,9 +5,9 @@ function myPush(arr, val) {
       return arr;
     }
            
-    let numArray = [44,55,66,77];
-    let value = 100; 
-    console.log(myPush(numArray, value));
+let numArray = [44,55,66,77];
+let value = 100; 
+console.log(myPush(numArray, value));
 
 // 2) Pop
 function myPop(arr) {
@@ -35,3 +35,12 @@ let array = [1, 2, 3, 4, 7];
 console.log(myShift(array));
 
 // 4) Unshift
+function myUnshift(arr, val) {
+    for (let i = 0; i < arr.length; i++) {
+        val[i + 1] = arr[i];
+    } return val;
+} 
+
+let array = [44,55,66,77];
+let newArray = [102]; 
+console.log(myUnshift(array, newArray));
