@@ -1,0 +1,17 @@
+.colored {
+    border: 3px solid pink;
+}
+
+.form-search {
+display: inline-block;
+padding: 20px;	
+border: 1px solid gray;
+}
+
+.form-search button {
+width: 70px;	
+}
+
+.form-search input {
+width: 250px;	
+}
